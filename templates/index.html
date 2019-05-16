@@ -1,9 +1,12 @@
 {% extends 'layout.html' %}
+{% block titulo %}
+<title>Index</title>
+{% endblock %}
 
 {% block conteudo %}
-
-<h1>Boas.</h1>
-<h2>Bem-vindo à nossa loja!</h2>
-<img src="/static/loja.png">
-
+<center>
+    <h1>Olá{% if usr %}, {{ usr }}{% endif %}.</h1>
+    <h2>Bem-vindo à minha loja!</h2>
+    <img src="/static/images/loja.png">
+</center>
 {% endblock %}
