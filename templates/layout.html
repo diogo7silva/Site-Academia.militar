@@ -1,44 +1,49 @@
 <!DOCTYPE html>
-<html lang="pt-PT">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<link rel="shortcut icon" href="/static/favicon.png">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="stylesheet" type="text/css" href="/static/style.css">
-{% block titulo %}
-{% endblock %}
-
-<script type="text/javascript" src="/static/scroll.js"></script>
+  <title>Escola Secundária de Maximinos</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="/static/style.css">
+</head>
 <body>
-
-{% set livro = loja.livro %}
-{% set menu = loja.produtos %}
-{% set usr = loja.usr.id %}
-{% set carrinho = loja.carrinho %}
-{% set unidades = loja.unidades %}
-{% set total = loja.total() %}
-
-{% set icons = ['fas fa-question', 'fas fa-archive','fas fa-hard-hat', 'fas fa-motorcycle'] %}
+<!-- The navigation menu -->
 <div class="navbar">
-  <a class="active" href="/"><i class="fa fa-fw fa-home"></i> Home</a>
-  {% for nome in menu %}
-  <a href="/pr_ini/{{ nome.title }}"><i class="{{ icons.pop() }}"></i> {{ nome.title }}</a>
-  {% endfor %}
-  <a href="/carrinho_ini"><i class="fas fa-shopping-cart"></i> Carrinho</a>
-  {% if usr %}
-  <a href="/logout"><i class="fa fa-fw fa-user"></i> Logout</a>
-  <user><i class="fa fa-fw fa-user-tie"></i> {{ usr }}</user>
-  {% else %}
-  <a href="/login"><i class="fa fa-fw fa-lock"></i> Login</a>
-  <a href="/registo"><i class="fa fa-fw fa-user"></i> Registo</a>
-  {% endif %}
+  <a href="/">Home</a>
+  <div class="subnav">
+    <button class="subnavbtn">About <i class="fa fa-caret-down"></i></button>
+    <div class="subnav-content">
+      <a href="#company">Company</a>
+      <a href="#team">Team</a>
+      <a href="#careers">Careers</a>
+    </div>
+  </div>
+  <div class="subnav">
+    <button class="subnavbtn">Services <i class="fa fa-caret-down"></i></button>
+    <div class="subnav-content">
+      <a href="#bring">Bring</a>
+      <a href="#deliver">Deliver</a>
+      <a href="#package">Package</a>
+      <a href="#express">Express</a>
+    </div>
+  </div>
+  <div class="subnav">
+    <button class="subnavbtn">Partners <i class="fa fa-caret-down"></i></button>
+    <div class="subnav-content">
+      <a href="#link1">Link 1</a>
+      <a href="#link2">Link 2</a>
+      <a href="#link3">Link 3</a>
+      <a href="#link4">Link 4</a>
+    </div>
+  </div>
+  <a href="/login">Login</a>
+  <a href="/registo">Registar</a>
 </div>
+
 {% block conteudo %}
 {% endblock %}
 
-<br><center>
+
 <h3>&copy; Copyright 2019 Diogo Silva</h3>
-</center>
+
 </body>
 </html>
