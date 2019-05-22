@@ -18,4 +18,4 @@ def carrinho():
     return render_template('carrinho.html')
 
 if __name__ == '__main__':
-    app.run()
+    app.run(

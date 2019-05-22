@@ -1,110 +1,90 @@
-body {
-  background-color: #021bff;
-  font-family: Arial, Helvetica, sans-serif;
+html,body,h1,h2,h3,h4,h5,h6{
+    background-color: #696969;
+    text-align : center;
+    font-family: "Console", sans-serif;
 }
 
-shop {
-  display: block;
-  font-size: 1em;
-  color: #C11;
-  margin-top:16px;
-  margin-bottom:16px;
-}
-
-moeda {
-  display: block;
-  color: #1C1;
-  font-weight: bold;
-}
-
-input, textarea {
-  padding: 5px 15px;
-}
-
-input[type=text], input[type=password] {
-  width: 256px;
+legend{
+    color: white;
+    width: 220px;
+    font-weight: bold;
+    background-color: #333;
+    border: 1px solid;
+    border-color: #969696;
 }
 
 fieldset {
-  width: 256px;
-  padding: 50px;
-  background-color: #1696c9;
-  border: 2px groove;
+    width: 256px;
+    padding: 50px;
+    background-color: #4f4f4f;
+    border: 5px groove;
+    border-color: #969696;
+
 }
 
-
-table, td {
-  background-color: lightgray;
-  border: 30px solid #000000;
-  border-collapse: collapse;
-}
-
-td {
-  background-color: white;
-  text-align: center;
-  padding: 30px 10px;
-  width: 256px;
-  vertical-align: bottom;
-}
-
-.navbar user {
-  float: right;
-  padding: 12px;
-  color: #ff8;
-  text-decoration: none;
-  font-size: 17px;
-  background-color: #000;
-}
-
+/* The navigation menu */
 .navbar {
-  width: 100%;
-  background-color: #555;
-  overflow: auto;
+  overflow: hidden;
+  background-color: #333;
 }
 
+/* Navigation links */
 .navbar a {
   float: left;
-  padding: 12px;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* The subnavigation menu */
+.subnav {
+  float: left;
+  overflow: hidden;
+}
+
+/* Subnav button */
+.subnav .subnavbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+/* Add a red background color to navigation links on hover */
+.navbar a:hover, .subnav:hover .subnavbtn {
+  background-color: red;
+}
+
+/* Style the subnav content - positioned absolute */
+.subnav-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  background-color: red;
+  width: 100%;
+  z-index: 1;
+}
+
+/* Style the subnav links */
+.subnav-content a {
+  float: left;
   color: white;
   text-decoration: none;
-  font-size: 17px;
 }
 
-.navbar a:hover {
-  background-color: #000;
+/* Add a grey background color on hover */
+.subnav-content a:hover {
+  background-color: #eee;
+  color: black;
 }
 
-.active {
-  background-color: #1696c9;
-}
-
-@media screen and (max-width: 500px) {
-  .navbar a {
-    float: none;
-  }
-}
-
-
-
-.pagbar {
-  padding: 12px;
-  background-color: #555;
-}
-
-.pagbar a {
-  padding: 12px;
-  color: #39d;
-  text-decoration: none;
-  font-size: 14px;
-}
-
-.pagbar current {
-  padding: 12px;
-  color: #fff;
-  text-decoration: none;
-  font-size: 14px;
-}
-
-.pagbar a:hover {
-  background-color: #000;
+/* When you move the mouse over the subnav container, open the subnav content */
+.subnav:hover .subnav-content {
+  display: block;
 }
