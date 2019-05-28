@@ -1,5 +1,5 @@
 html,body,h1,h2,h3,h4,h5,h6{
-    background-color: #696969;
+    background-color: white;
     text-align : center;
     font-family: "Console", sans-serif;
 }
@@ -89,7 +89,9 @@ fieldset {
   display: block;
 }
 
-
+.texto{
+    text-align: left; !important
+}
 
 .footer {
    position: fixed;

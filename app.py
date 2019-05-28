@@ -18,6 +18,13 @@ def root():
         frase2 = ('Boa Noite !')
     return render_template('index.html', t1=frase1, t2=frase2)
 
+@app.route('/mensagem')
+def mensagem():
+    return render_template('mensagem.html')
+
+@app.route('/sobre')
+def sobre():
+    return render_template('sobre.html')
 
 @app.route('/login')
 def login():
@@ -30,6 +37,8 @@ def registo():
 @app.route('/carrinho')
 def carrinho():
     return render_template('carrinho.html')
+
+
 
 if __name__ == '__main__':
     app.run()
